@@ -48,7 +48,13 @@ def employee_analysis(name: str, hours: float, units: int, productivity: float) 
     print('Output Saved.')
 
 
-def exception_handler(test_input):
+def exception_handler(test_input: int or float) -> None:
+    """
+    This function contains an exception handler that raises a ValueError when negative numbers are entered for the
+    user input.
+    :param test_input: This tests the input for units, hours, and productivity.
+    :return: This function returns no data.
+    """
     while True:
         try:
             if test_input < 0:
